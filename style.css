@@ -55,21 +55,16 @@ body {
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
   max-width: 800px;
-}
-
-main .image {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  height: 100%;
-  margin-top: auto;
-  max-width: 1000px;
+  align-items: stretch;
 }
 
 main .image img {
-  display: block;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
+  object-position: left;
 }
 
 main .descricao a {
@@ -162,3 +157,15 @@ footer {
 }
 /* #endregion */
 
+@media (max-width: 500px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    margin: 0 2rem;
+  }
+
+  .vantagens {
+    height: 10rem;
+  }
+}
