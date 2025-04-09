@@ -1,0 +1,164 @@
+body {
+  display: grid;
+  justify-items: center;
+  background-color: #ebebeb;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  height: 100vh;
+  align-content: space-between;
+}
+
+/* #region LOGO */
+.titulo {
+  display: block; /* Necessário transformar a imagem que é inline-block em block para a margin auto funcionar */
+  margin-top: 30px;
+  margin-left: auto; /* Margem automática para centralizar o título */
+  margin-right: auto; /* Margem automática para centralizar o título */
+}
+/* #endregion */
+
+/* #region NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: center; /* Alinha ao centro toda a navbar */
+  margin-bottom: 25px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none; /* Remove o estilo padrão de elementos ul */
+  align-items: center;
+  margin: 20px 0; /* Insere um mespaçamento em cima e embaixo e remove a margem padrão das laterais de elemento ul*/
+  padding: 0; /* Remove o padding padrão de elementos ul*/
+  gap: 10px;
+}
+
+.navbar li {
+  background-color: white;
+}
+
+.navbar li:hover {
+  outline: tomato solid 3px;
+}
+
+.navbar a {
+  display: inline-block;
+  padding: 10px;
+  color: black;
+  text-decoration: none; /* Removendo os estilos de link */
+}
+
+/* #endregion */
+
+/* #region GRID DO CONTEÚDO PRINCIPAL */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 800px;
+}
+
+main .image {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 100%;
+  margin-top: auto;
+  max-width: 1000px;
+}
+
+main .image img {
+  display: block;
+  object-fit: cover;
+}
+
+main .descricao a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  background-color: tomato;
+  color: white;
+}
+
+.descricao {
+  display: grid;
+  align-items: start;
+  justify-items: end;
+  grid-template-rows: auto auto auto;
+  padding: 10px;
+  background-color: white;
+}
+
+.vantagens {
+  display: flex;
+  text-align: end;
+}
+
+.vantagens span {
+  align-self: center;
+  color: #838383;
+  font-weight: bold;
+  font-size: 40px;
+  position: relative;
+  right: 15px;
+}
+
+.vantagens-topic {
+  background-color: white;
+  grid-template-columns: 2.5rem;
+}
+
+.vantagens-topic-item {
+  display: grid;
+  align-items: center;
+  width: 100%;
+}
+
+.vantagens-topic-item img {
+  padding: 10px;
+}
+
+.vantagens-topic-item h2 {
+  padding: 5px;
+  margin: 5px;
+}
+
+.vantagens-topic-item p {
+  padding: 5px;
+}
+
+.vantagens-topic-item:nth-child(odd) {
+  background-color: #ebebeb;
+}
+
+.vantagens-topic-item:hover {
+  border-left: tomato solid 3px;
+}
+
+.segunda-linha {
+  margin-top: 0;
+  grid-column-start: 2;
+}
+
+.descricao::before {
+  content: " ";
+  justify-self: end;
+  background-color: tomato;
+  height: 5px;
+  width: 50px;
+  position: relative;
+  left: 35px;
+}
+
+/* #endregion */
+
+/* #region FOOTER */
+footer {
+  text-align: center;
+  width: 100%;
+  height: 71px;
+  background-color: white;
+  box-sizing: border-box;
+}
+/* #endregion */
+
